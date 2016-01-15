@@ -8,7 +8,5 @@ RUN pip install pip --upgrade
 RUN pip install bokeh
 RUN pip install python-libsbml-experimental -f http://nikosonnensche.in/wheels/index.html --no-index --trusted-host nikosonnensche.in
 RUN pip install cameo==0.5.0
-RUN rm *.ipynb 
-RUN rm -rd datasets featured communities
 
 USER main
