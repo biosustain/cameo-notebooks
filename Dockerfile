@@ -9,9 +9,9 @@ RUN pip install bokeh
 RUN pip install python-libsbml-experimental -f http://nikosonnensche.in/wheels/index.html --no-index --trusted-host nikosonnensche.in
 RUN pip install cameo==0.5.0
 
-RUN pip3 install pip --upgrade
-RUN pip3 install bokeh
-RUN pip3 install python-libsbml-experimental -f http://nikosonnensche.in/wheels/index.html --no-index --trusted-host nikosonnensche.in
-RUN pip3 install cameo==0.5.0
+RUN /home/main/anaconda/envs/python3/bin/pip install pip --upgrade
+RUN /home/main/anaconda/envs/python3/bin/pip install bokeh
+RUN /home/main/anaconda/envs/python3/bin/pip install python-libsbml-experimental -f http://nikosonnensche.in/wheels/index.html --no-index --trusted-host nikosonnensche.in
+RUN /home/main/anaconda/envs/python3/bin/pip install cameo==0.5.0
 
 USER main
