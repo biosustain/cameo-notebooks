@@ -1,4 +1,4 @@
-3DSD	1 * 3-dehydroshikimate#m237 <=> 1 * H2O#h2o + 1 * protocathechuic acid#PAC	0	1000	3-dedhydroshikimate dehydratase	
-ACAR_PPTase	1 * protocathechuic acid#PAC +  1 * NADPH#m517 + 1 * ATP#m340 <=> 1 * NADP#m515 + 1 * ADP#m335 + 1 * protocatechuic aldehyde#PAL	0	1000	aryl carboxylic acid reductase	followed by phosphopantetheine transferase
-hsOMT	1 * S-adenosyl-L-methionine#m548 + 1 * protocatechuic aldehyde#PAL <=> 1 * S-adenosyl-L-homocysteine#m547 + 1 * Vanillin#vnl	0	1000	 O-methyltransferase	
-UGT	1 * Vanillin#vnl + 1 * UDP-glucose#m557 <=> 1 * vanillin-B-glucoside#vnlBglu	0	1000	UDP-glycosyltransferase	
+3DSD	1 * 3-dehydroshikimate#s_0211 <=> 1 * H2O#s_0803 + 1 * protocathechuic acid#PAC	0	1000	3-dedhydroshikimate dehydratase	
+ACAR_PPTase	1 * protocathechuic acid#PAC +  1 * NADPH#s_1212 + 1 * ATP#s_0434 <=> 1 * NADP#s_1207 + 1 * ADP#s_0394 + 1 * protocatechuic aldehyde#PAL	0	1000	aryl carboxylic acid reductase	followed by phosphopantetheine transferase
+hsOMT	1 * S-adenosyl-L-methionine#s_1416 + 1 * protocatechuic aldehyde#PAL <=> 1 * S-adenosyl-L-homocysteine#s_1413 + 1 * Vanillin#vnl	0	1000	 O-methyltransferase	
+UGT	1 * Vanillin#vnl + 1 * UDP-glucose#s_1543 <=> 1 * vanillin-B-glucoside#vnlBglu	0	1000	UDP-glycosyltransferase	
