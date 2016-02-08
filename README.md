@@ -9,3 +9,5 @@ Jupyter notebooks for the [cameo](http://cameo.bio/) (computer aided metabolic e
 Please install the following commit hook before working on the notebooks.
 
 ```ln -s ../../pre-commit.sh .git/hooks/pre-commit```
+
+If you want to use util/run_notebook.py you need to install runipy first.
