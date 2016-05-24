@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-- docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
+- docker login -e=$DOCKER_EMAIL -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
 - docker pull biosustain/cameo-wercker-box
 - docker ps -a
 
