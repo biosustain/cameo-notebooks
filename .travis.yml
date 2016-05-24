@@ -1,0 +1,13 @@
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+before_install:
+- docker login -e=$DOCKER_EMAIL -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
+- docker pull biosustain/cameo-wercker-box
+
+script:
+- docker run -v $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cameo-wercker-box /bin/bash -c "source activate cameo2.7 && pip install runipy cameo && cd /tmp/notebooks && ./test_notebooks.sh"
