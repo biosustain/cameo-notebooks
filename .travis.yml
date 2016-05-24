@@ -11,4 +11,4 @@ before_install:
 - docker ps -a
 
 script:
-- docker run -v $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cameo-wercker-box /bin/bash -c "source activate cameo2.7 && pip install runipy cameo && cd /tmp/notebooks && ./test_notebooks.sh"
+- travis_wait docker run -v $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cameo-wercker-box /bin/bash -c "source activate cameo2.7 && pip install runipy cameo && cd /tmp/notebooks && ./test_notebooks.sh"
