@@ -6,8 +6,9 @@ services:
   - docker
 
 before_install:
-- docker pull biosustain/cobra-notebook
+- docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
+- docker pull biosustain/cameo-wercker-box
 - docker ps -a
 
 script:
-- docker run -v $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cobra-notebook /bin/sh -c "pip install runipy && cd /tmp/notebooks && ./test_notebooks.sh"
+- docker run -v $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cameo-wercker-box /bin/bash -c "source activate cameo2.7 && pip install runipy cameo && cd /tmp/notebooks && ./test_notebooks.sh"
