@@ -13,4 +13,4 @@ before_install:
 - docker pull biosustain/cameo-wercker-box
 
 script:
-- docker run -V $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cameo-wercker-box /bin/bash -c "source activate cameo$TRAVIS_PYTHON_VERSION && pip install runipy cameo[all] && cd /tmp/notebooks && ./test_notebooks.sh"
+- docker run -v $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cameo-wercker-box /bin/bash -c "source activate cameo$TRAVIS_PYTHON_VERSION && pip install runipy cameo[all] && cd /tmp/notebooks && ./test_notebooks.sh"
