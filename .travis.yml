@@ -1,16 +1,20 @@
 sudo: required
 
 language: python
-python:
-  - 2.7
-  - 3.4
+
+env:
+  - CONDAENV=python2.7
+  - CONDAENV=python3.4
+  - CONDAENV=python
 
 services:
   - docker
 
 before_install:
 - docker login -e=$DOCKER_EMAIL -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
-- docker pull biosustain/cameo-wercker-box
+- docker pull biosustain/cobra-cplex
 
 script:
-- docker run -v $TRAVIS_BUILD_DIR:/tmp/notebooks biosustain/cameo-wercker-box /bin/bash -c "source activate cameo$TRAVIS_PYTHON_VERSION && conda install runipy && pip install cameo[all] && cd /tmp/notebooks && ./test_notebooks.sh"
+- docker run -v $(pwd):/tmp/notebooks biosustain/cobra-cplex /bin/bash -c "source activate $CONDAENV && pip install cameo --upgrade && cd /tmp/notebooks && ./test_notebooks.sh"
+
+
