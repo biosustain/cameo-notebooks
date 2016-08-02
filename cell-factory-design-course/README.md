@@ -1,0 +1,1 @@
+Course materials for genome-scale metabolic modeling and cell factory design course (2 days) at DTU Biosustain (course [website](biosustain.github.io/cell-factory-design-course))
